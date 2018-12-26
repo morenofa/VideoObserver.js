@@ -2,7 +2,7 @@
  * Created by aitor on 11/6/18.
  */
 
-import { VideoObserver } from '../src/';
+import VideoObserver from '../src/';
 
 describe('VideoObserver', () => {
     let vObserver = null;

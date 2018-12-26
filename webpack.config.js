@@ -14,7 +14,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'lib'),
-        filename: '[name].[chunkhash].js',
+        filename: '[name].js',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
@@ -40,7 +40,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin('dist', {}),
+        new CleanWebpackPlugin('lib', {}),
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
         }),
@@ -56,7 +56,7 @@ module.exports = {
         colors: true
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
+        contentBase: path.join(__dirname, "lib"),
         compress: true,
         port: 8000,
     },
