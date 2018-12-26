@@ -50,7 +50,7 @@ Then run the `build` script:
 npm run build
 ```
 
-__NOTE:__ You need version v8.11.2 or higher of node.js
+__NOTE:__ You need node.js v8.11.2 or higher.
 
 ## Changelog
 

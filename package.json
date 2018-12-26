@@ -1,6 +1,6 @@
 {
   "name": "video-observer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VideoObserver.js allows you to listen some particular events thats occurs for on streaming videos.",
   "scripts": {
     "dev": "webpack-dev-server --inline --mode development --watch",
@@ -9,6 +9,20 @@
     "test": "karma start ./karma.config.js",
     "test:chrome": "karma start ./karma.config.js --browsers Chrome --singleRun"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morenofa/video-observer"
+  },
+  "keywords": [
+    "video",
+    "observer",
+    "stream",
+    "live"
+  ],
+  "bugs": {
+    "url": "https://github.com/morenofa/video-observer/issues"
+  },
+  "homepage": "https://github.com/morenofa/video-observer#readme",
   "author": "Aitor Moreno Farré",
   "license": "MIT",
   "devDependencies": {
