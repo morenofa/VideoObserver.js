@@ -17,7 +17,7 @@ $ npm install video-observer
 ## Example Usage
 
 ````js
-import { VideoObserver } from 'video-observer';
+import VideoObserver from 'video-observer';
 
 var vObserver = VideoObserver('#video');
 
