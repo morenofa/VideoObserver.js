@@ -13,7 +13,7 @@ module.exports = {
         main: './src/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'lib'),
         filename: '[name].[chunkhash].js',
         libraryTarget: 'umd',
         umdNamedDefine: true

@@ -17,6 +17,3 @@ nbproject
 .node_history
 .vscode
 package-lock.json
-
-# webpack
-dist/
