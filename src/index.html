@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Video Observer</title>
+
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+<body>
+    <div id="app">
+        <video width="320" height="240" autoplay loop muted>
+            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+
+    <script type="application/javascript">
+        var vObserver = VideoObserver('video');
+
+        vObserver.on('resolutionChange', function (resolution, event) {
+            console.log('resolutionChanged', resolution);
+        });
+
+        vObserver.on('ready', function (error) {
+            if (error) {
+                console.log('ready', error);
+            }
+
+            console.log('ready without errors');
+        });
+
+        setTimeout(function () {
+            var video = document.querySelector('video');
+
+            console.info('setTimeout 3s');
+
+            video.src = 'https://sample-videos.com/video123/mp4/480/big_buck_bunny_480p_5mb.mp4';
+
+
+            vObserver.on('ready', function (error) {
+                if (error) {
+                    console.log('ready', error);
+                }
+
+                console.log('ready without errors 2');
+            });
+        }, 3000);
+
+        setTimeout(function () {
+            var video = document.querySelector('video');
+
+            console.info('setTimeout 6s');
+
+            video.src = 'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4';
+        }, 6000);
+
+        setTimeout(function () {
+            vObserver.on('ready', function (error) {
+                if (error) {
+                    console.log('ready', error);
+                }
+
+                console.log('ready without errors 3');
+            });
+        }, 9000);
+    </script>
+</body>
+</html>

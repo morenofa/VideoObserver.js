@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+
+# Miscellaneous
+*~
+*#
+.npm
+.DS_STORE
+.netbeans
+nbproject
+.idea
+.node_history
+.vscode
+package-lock.json
+
+# webpack
+dist/
