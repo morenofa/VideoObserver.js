@@ -1,6 +1,6 @@
 {
   "name": "video-observer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "VideoObserver.js allows you to listen some particular events thats occurs for on streaming videos.",
   "main": "lib/index.js",
   "scripts": {

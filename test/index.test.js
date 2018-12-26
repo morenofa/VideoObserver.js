@@ -2,11 +2,27 @@
  * Created by aitor on 11/6/18.
  */
 
-import VideoObserver from '../src/';
+import { VideoObserver } from '../src/';
 
 describe('VideoObserver', () => {
     let vObserver = null;
     let videoId = null;
+
+    it('should throw an error if video is not defined', () => {
+        expect(() => {
+            vObserver = VideoObserver('#undefinedVideo');
+        }).toThrow();
+    });
+
+    it('should throw an error if element is not a video', () => {
+        const img = document.createElement('img');
+        img.id = "fakeVideo";
+        document.body.appendChild(img);
+
+        expect(() => {
+            vObserver = VideoObserver(img.id);
+        }).toThrow();
+    });
 
     it('checking on ready', (done) => {
         const video = document.querySelector(videoId);

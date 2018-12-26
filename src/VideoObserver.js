@@ -12,6 +12,7 @@ export default function VideoObserver(selector) {
 
     //Initializations
 
+    _checkVideo();
     _initListeners();
 
     //Public methods
@@ -108,6 +109,16 @@ export default function VideoObserver(selector) {
     }
 
     //Helpers
+
+    function _checkVideo() {
+        if (!video) {
+            throw new Error('Video tag not found with "' + selector + '" selector');
+        }
+
+        if (video.tagName.toLocaleLowerCase() !== 'video') {
+            throw new Error('You have to select a video');
+        }
+    }
 
     function _checkReady(video, timeout = 10 * 1000) {
         const startTime = Date.now();
