@@ -7,7 +7,7 @@ const webpackConfig = require('./webpack.config.js');
 let singleRun = false;
 let browsers = ['Chrome'];
 
-if (process.env.TRAVIS === true) {
+if (process.env.TRAVIS) {
     singleRun = true;
     browsers = ['ChromeHeadlessNoSandbox'];
 }
