@@ -4,11 +4,19 @@
 
 const webpackConfig = require('./webpack.config.js');
 
+let singleRun = false;
+let browsers = ['Chrome'];
+
+if (process.env.TRAVIS === true) {
+    singleRun = true;
+    browsers = ['ChromeHeadlessNoSandbox'];
+}
+
 module.exports = config => {
     config.set({
         autoWatch: true,
-        //singleRun: false,
-        browsers: ['ChromeHeadlessNoSandbox'],
+        singleRun: singleRun,
+        browsers: browsers,
         basePath: '.',
 
         customLaunchers: {
