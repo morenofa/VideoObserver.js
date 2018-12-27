@@ -8,8 +8,15 @@ module.exports = config => {
     config.set({
         autoWatch: true,
         //singleRun: false,
-        browsers: ['Chrome'],
+        browsers: ['Chrome', 'ChromeHeadless', 'ChromeHeadlessNoSandbox'],
         basePath: '.',
+
+        customLaunchers: {
+            ChromeHeadlessNoSandbox: {
+                base: 'ChromeHeadless',
+                flags: ['--no-sandbox']
+            }
+        },
 
         files: [
             { pattern: 'test/*_test.js', watched: false },
