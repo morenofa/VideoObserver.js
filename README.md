@@ -1,4 +1,4 @@
-# Video Observer
+# VideoObserver.js
 
 [![Build Status](https://travis-ci.org/morenofa/VideoObserver.js.svg?branch=master)](https://travis-ci.org/morenofa/VideoObserver.js)
 
@@ -54,7 +54,7 @@ __NOTE:__ You need node.js v8.11.2 or higher.
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/morenofa/video-observer/blob/master/CHANGELOG.md).
+See [CHANGELOG.md](https://github.com/morenofa/VideoObserver.js/blob/master/CHANGELOG.md).
 
 
 ## License
