@@ -1,6 +1,6 @@
 # Video Observer
 
-[![Build Status](https://travis-ci.org/morenofa/video-observer.svg?branch=master)](https://travis-ci.org/morenofa/video-observer)
+[![Build Status](https://travis-ci.org/morenofa/VideoObserver.js.svg?branch=master)](https://travis-ci.org/morenofa/VideoObserver.js)
 
 ## Purpose
 
